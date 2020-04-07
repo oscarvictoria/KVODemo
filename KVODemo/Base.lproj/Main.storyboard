@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="OZs-Sh-9I9">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Settings-->
+        <scene sceneID="J7e-I6-Scd">
+            <objects>
+                <viewController id="fXY-gD-Diu" customClass="SettingsViewController" customModule="KVODemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5KA-bN-2Do">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Selected welcome page size" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aNG-Ly-a4i">
+                                <rect key="frame" x="20" y="64" width="374" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="5" minValue="5" maxValue="80" translatesAutoresizingMaskIntoConstraints="NO" id="xb3-kQ-8Bi">
+                                <rect key="frame" x="18" y="104.5" width="378" height="31"/>
+                                <connections>
+                                    <action selector="sliderChanged:" destination="fXY-gD-Diu" eventType="valueChanged" id="w7o-Gx-CFg"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o8z-QV-rDI">
+                                <rect key="frame" x="202" y="163.5" width="10.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LUD-f4-IbM">
+                                <rect key="frame" x="47" y="340" width="320" height="216"/>
+                            </pickerView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="aNG-Ly-a4i" firstAttribute="top" secondItem="iJW-Eb-Vau" secondAttribute="top" constant="20" id="1c5-71-sfl"/>
+                            <constraint firstItem="LUD-f4-IbM" firstAttribute="centerX" secondItem="5KA-bN-2Do" secondAttribute="centerX" id="CA8-BY-tN5"/>
+                            <constraint firstItem="LUD-f4-IbM" firstAttribute="centerY" secondItem="5KA-bN-2Do" secondAttribute="centerY" id="CMp-YB-2t7"/>
+                            <constraint firstItem="o8z-QV-rDI" firstAttribute="top" secondItem="xb3-kQ-8Bi" secondAttribute="bottom" constant="29" id="FuH-zr-cMX"/>
+                            <constraint firstItem="iJW-Eb-Vau" firstAttribute="trailing" secondItem="aNG-Ly-a4i" secondAttribute="trailing" constant="20" id="K8Q-vz-MiQ"/>
+                            <constraint firstItem="o8z-QV-rDI" firstAttribute="centerX" secondItem="5KA-bN-2Do" secondAttribute="centerX" id="c79-RP-8xe"/>
+                            <constraint firstItem="iJW-Eb-Vau" firstAttribute="trailing" secondItem="xb3-kQ-8Bi" secondAttribute="trailing" constant="20" id="deB-IE-lsV"/>
+                            <constraint firstItem="aNG-Ly-a4i" firstAttribute="leading" secondItem="iJW-Eb-Vau" secondAttribute="leading" constant="20" id="mEi-hE-Zc7"/>
+                            <constraint firstItem="xb3-kQ-8Bi" firstAttribute="top" secondItem="aNG-Ly-a4i" secondAttribute="bottom" constant="20" id="vvx-ir-TxK"/>
+                            <constraint firstItem="xb3-kQ-8Bi" firstAttribute="leading" secondItem="iJW-Eb-Vau" secondAttribute="leading" constant="20" id="xgU-YO-2PE"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="iJW-Eb-Vau"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Settings" id="Mro-aj-nk2"/>
+                    <connections>
+                        <outlet property="fontSizeLabel" destination="aNG-Ly-a4i" id="Y1j-wo-GRu"/>
+                        <outlet property="pickerView" destination="LUD-f4-IbM" id="82e-MN-fhY"/>
+                        <outlet property="sizeLabel" destination="o8z-QV-rDI" id="5EC-ZX-zjQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="guA-58-aHF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-579.71014492753625" y="555.80357142857144"/>
+        </scene>
+        <!--Welcome-->
+        <scene sceneID="enb-hb-JFJ">
+            <objects>
+                <viewController id="GGe-uf-lwi" customClass="WelcomeViewController" customModule="KVODemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="KOb-Z5-Amy">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VAd-hs-aCn">
+                                <rect key="frame" x="20" y="64" width="374" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="XA8-VZ-bg0"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="34"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sun.haze.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="H5e-q9-wY7">
+                                <rect key="frame" x="20" y="260.5" width="374" height="376"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="H5e-q9-wY7" secondAttribute="height" multiplier="1:1" id="6dl-YY-REf"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="tintColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="H5e-q9-wY7" firstAttribute="centerY" secondItem="KOb-Z5-Amy" secondAttribute="centerY" id="39c-E3-z5Z"/>
+                            <constraint firstItem="kmX-gf-050" firstAttribute="trailing" secondItem="H5e-q9-wY7" secondAttribute="trailing" constant="20" id="6eV-YE-vhM"/>
+                            <constraint firstItem="VAd-hs-aCn" firstAttribute="leading" secondItem="kmX-gf-050" secondAttribute="leading" constant="20" id="JdZ-lw-Kc3"/>
+                            <constraint firstItem="VAd-hs-aCn" firstAttribute="top" secondItem="kmX-gf-050" secondAttribute="top" constant="20" id="ZMf-Sw-KH0"/>
+                            <constraint firstItem="H5e-q9-wY7" firstAttribute="leading" secondItem="kmX-gf-050" secondAttribute="leading" constant="20" id="cKZ-2T-QdW"/>
+                            <constraint firstItem="kmX-gf-050" firstAttribute="trailing" secondItem="VAd-hs-aCn" secondAttribute="trailing" constant="20" id="eDQ-4B-UHY"/>
+                            <constraint firstItem="H5e-q9-wY7" firstAttribute="centerX" secondItem="KOb-Z5-Amy" secondAttribute="centerX" id="ok8-ZJ-3lF"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="kmX-gf-050"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Welcome" id="POO-VV-ZFo"/>
+                    <connections>
+                        <outlet property="iconImage" destination="H5e-q9-wY7" id="joM-Wm-5pA"/>
+                        <outlet property="welcomeLabel" destination="VAd-hs-aCn" id="IXb-8O-DyH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vhf-Dl-jxA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-579.71014492753625" y="-90.401785714285708"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="Tg2-OJ-CZG">
+            <objects>
+                <tabBarController id="OZs-Sh-9I9" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="knV-4O-P0c">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="GGe-uf-lwi" kind="relationship" relationship="viewControllers" id="eMb-d1-vbw"/>
+                        <segue destination="fXY-gD-Diu" kind="relationship" relationship="viewControllers" id="zJP-Dq-3bC"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="05o-RE-Pof" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1497" y="233"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="sun.haze.fill" catalog="system" width="64" height="58"/>
+    </resources>
+</document>
